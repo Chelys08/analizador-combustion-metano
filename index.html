@@ -13,82 +13,57 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #eef2ff, #f8fafc);
-            color: #1e293b;
+            background: #f4f7fb;
+            color: #1f2937;
         }
 
         header {
-            background: #1e3a8a;
+            background: #17365d;
             color: white;
-            padding: 35px 20px;
             text-align: center;
+            padding: 30px 20px;
         }
 
         header h1 {
             margin: 0 0 10px;
-            font-size: 32px;
+            font-size: 30px;
         }
 
         header p {
-            margin: 0;
-            font-size: 17px;
+            margin: 5px 0;
         }
 
-        .container {
-            max-width: 1100px;
+        .formula {
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        main {
+            max-width: 1000px;
             margin: 30px auto;
             padding: 0 20px;
         }
 
-        .formula {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            margin-bottom: 25px;
-        }
-
-        .formula h2 {
-            margin-top: 0;
-        }
-
-        .formula-text {
-            font-size: 30px;
-            font-weight: bold;
-            margin: 20px 0;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
         .card {
             background: white;
-            border-radius: 15px;
+            border-radius: 12px;
             padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
         }
 
-        .card h3 {
-            color: #1e3a8a;
-        }
-
-        .atom {
-            font-size: 45px;
-            font-weight: bold;
-            margin: 15px 0;
+        .card h2 {
+            color: #17365d;
+            margin-top: 0;
         }
 
         button {
             background: #2563eb;
             color: white;
             border: none;
-            padding: 12px 20px;
-            border-radius: 8px;
+            padding: 11px 18px;
+            border-radius: 7px;
             cursor: pointer;
             font-size: 15px;
             margin-top: 10px;
@@ -98,132 +73,105 @@
             background: #1d4ed8;
         }
 
-        .result {
-            margin-top: 15px;
+        .resultado {
+            background: #eef4ff;
+            border-left: 5px solid #2563eb;
             padding: 15px;
-            background: #eff6ff;
-            border-radius: 10px;
-            display: none;
+            margin-top: 15px;
+            border-radius: 6px;
+            line-height: 1.7;
         }
 
-        .molecule {
-            margin: 25px auto;
-            width: 230px;
-            height: 180px;
-            position: relative;
+        .molecula {
+            text-align: center;
+            margin: 25px 0;
+            font-size: 20px;
         }
 
-        .carbon,
-        .hydrogen {
-            position: absolute;
-            display: flex;
-            align-items: center;
+        .carbono {
+            display: inline-flex;
             justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            background: #333;
+            color: white;
             border-radius: 50%;
             font-weight: bold;
+            position: relative;
+            z-index: 2;
         }
 
-        .carbon {
-            width: 65px;
-            height: 65px;
-            background: #334155;
-            color: white;
-            left: 82px;
-            top: 58px;
+        .hidrogeno {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 55px;
+            height: 55px;
+            background: #d9eaf7;
+            border: 2px solid #2563eb;
+            border-radius: 50%;
+            font-weight: bold;
+            margin: 15px;
         }
 
-        .hydrogen {
-            width: 45px;
-            height: 45px;
-            background: #dbeafe;
-            color: #1e3a8a;
-        }
-
-        .h1 {
-            left: 92px;
-            top: 0;
-        }
-
-        .h2 {
-            left: 10px;
-            top: 65px;
-        }
-
-        .h3 {
-            right: 10px;
-            top: 65px;
-        }
-
-        .h4 {
-            left: 92px;
-            bottom: 0;
-        }
-
-        .line {
-            position: absolute;
-            background: #64748b;
-            height: 4px;
-            transform-origin: left center;
-        }
-
-        .line1 {
-            width: 60px;
-            left: 114px;
-            top: 62px;
-            transform: rotate(-90deg);
-        }
-
-        .line2 {
-            width: 75px;
-            left: 40px;
-            top: 88px;
-        }
-
-        .line3 {
-            width: 75px;
-            left: 120px;
-            top: 88px;
-        }
-
-        .line4 {
-            width: 60px;
-            left: 114px;
-            top: 122px;
-            transform: rotate(90deg);
-        }
-
-        .simulation {
-            margin-top: 30px;
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        .conexion {
+            font-size: 24px;
+            margin: 0 5px;
         }
 
         input {
-            width: 150px;
             padding: 10px;
-            border: 1px solid #cbd5e1;
-            border-radius: 8px;
+            width: 180px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
             font-size: 16px;
+        }
+
+        .datos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .dato {
+            background: #f8fafc;
+            padding: 18px;
+            border-radius: 8px;
+            border: 1px solid #dbe3ec;
+        }
+
+        .dato strong {
+            display: block;
+            color: #17365d;
+            margin-bottom: 8px;
+        }
+
+        .estructura {
+            background: #f8fafc;
+            border: 2px solid #dbe3ec;
+            border-radius: 10px;
+            padding: 18px;
+            margin-top: 15px;
+            font-family: monospace;
+            white-space: pre-wrap;
         }
 
         footer {
             text-align: center;
             padding: 25px;
-            margin-top: 30px;
-            background: #1e293b;
+            background: #17365d;
             color: white;
+            margin-top: 40px;
         }
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 25px;
-            }
-
-            .formula-text {
-                font-size: 22px;
-            }
+        .importante {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -232,230 +180,391 @@
 
 <header>
     <h1>Analizador de Combustión del Metano</h1>
-    <p>Aplicación educativa para representar estructuras químicas y analizar una reacción</p>
+    <p>Aplicación de química orgánica y estructuras de datos</p>
+
+    <div class="formula">
+        CH₄ + 2O₂ → CO₂ + 2H₂O
+    </div>
 </header>
 
-<div class="container">
+<main>
 
-    <section class="formula">
-        <h2>Combustión del metano</h2>
-
-        <div class="formula-text">
-            CH₄ + 2O₂ → CO₂ + 2H₂O
-        </div>
+    <!-- SECCIÓN 1 -->
+    <section class="card">
+        <h2>1. Representación de los átomos</h2>
 
         <p>
-            Esta aplicación representa los átomos del metano,
-            su estructura molecular, el balance químico y una
-            simulación de la reacción.
+            El metano está formado por un átomo de carbono y cuatro átomos
+            de hidrógeno. Para representar esta información se utiliza un
+            <strong>arreglo (array)</strong>.
         </p>
+
+        <button onclick="mostrarAtomos()">
+            Mostrar información
+        </button>
+
+        <div id="resultadoAtomos" class="resultado"></div>
     </section>
 
-    <div class="cards">
 
-        <div class="card">
-            <h3>Átomos del metano</h3>
-
-            <div class="atom">
-                CH₄
-            </div>
-
-            <p>Carbono: 1 átomo</p>
-            <p>Hidrógeno: 4 átomos</p>
-
-            <button onclick="mostrarAtomos()">
-                Mostrar información
-            </button>
-
-            <div id="atomos" class="result"></div>
-        </div>
-
-        <div class="card">
-            <h3>Estructura molecular</h3>
-
-            <div class="molecule">
-
-                <div class="line line1"></div>
-                <div class="line line2"></div>
-                <div class="line line3"></div>
-                <div class="line line4"></div>
-
-                <div class="carbon">C</div>
-
-                <div class="hydrogen h1">H</div>
-                <div class="hydrogen h2">H</div>
-                <div class="hydrogen h3">H</div>
-                <div class="hydrogen h4">H</div>
-
-            </div>
-
-            <p>
-                El carbono está conectado con cuatro átomos
-                de hidrógeno.
-            </p>
-
-            <button onclick="mostrarGrafo()">
-                Mostrar conexiones
-            </button>
-
-            <div id="grafo" class="result"></div>
-        </div>
-
-        <div class="card">
-            <h3>Balance químico</h3>
-
-            <p>
-                CH₄ + 2O₂ → CO₂ + 2H₂O
-            </p>
-
-            <button onclick="verificarBalance()">
-                Verificar balance
-            </button>
-
-            <div id="balance" class="result"></div>
-        </div>
-
-    </div>
-
-    <section class="simulation">
-
-        <h2>Simulación de la reacción</h2>
+    <!-- SECCIÓN 2 -->
+    <section class="card">
+        <h2>2. Estructura molecular mediante un grafo</h2>
 
         <p>
-            Ingresa la cantidad de metano (CH₄) en moles:
+            La molécula de metano puede representarse mediante un
+            <strong>grafo</strong>, donde los átomos son los nodos y los
+            enlaces químicos son las conexiones.
         </p>
+
+        <div class="molecula">
+
+            <div>
+                <span class="hidrogeno">H1</span>
+            </div>
+
+            <div>
+                <span class="hidrogeno">H2</span>
+
+                <span class="conexion">—</span>
+
+                <span class="carbono">C</span>
+
+                <span class="conexion">—</span>
+
+                <span class="hidrogeno">H3</span>
+            </div>
+
+            <div>
+                <span class="hidrogeno">H4</span>
+            </div>
+
+        </div>
+
+        <button onclick="mostrarGrafo()">
+            Mostrar conexiones
+        </button>
+
+        <div id="resultadoGrafo" class="resultado"></div>
+    </section>
+
+
+    <!-- SECCIÓN 3 -->
+    <section class="card">
+        <h2>3. Verificación del balance químico</h2>
+
+        <p>
+            La aplicación verifica que el número de átomos de cada elemento
+            sea igual antes y después de la reacción.
+        </p>
+
+        <button onclick="verificarBalance()">
+            Verificar balance
+        </button>
+
+        <div id="resultadoBalance" class="resultado"></div>
+    </section>
+
+
+    <!-- SECCIÓN 4 -->
+    <section class="card">
+        <h2>4. Simulación de la reacción</h2>
+
+        <p>
+            Introduce la cantidad de moles de metano (CH₄) para simular
+            la cantidad necesaria de oxígeno y los productos generados.
+        </p>
+
+        <label for="moles">
+            Moles de CH₄:
+        </label>
 
         <input
             type="number"
-            id="metano"
+            id="moles"
             min="0"
             step="0.1"
-            placeholder="Ej. 2"
+            value="2"
         >
 
         <button onclick="simularReaccion()">
-            Simular combustión
+            Simular reacción
         </button>
 
-        <div id="simulacion" class="result"></div>
-
+        <div id="resultadoSimulacion" class="resultado"></div>
     </section>
 
-</div>
+
+    <!-- SECCIÓN 5 -->
+    <section class="card">
+        <h2>5. Estructuras de datos utilizadas</h2>
+
+        <div class="datos">
+
+            <div class="dato">
+                <strong>Arreglo (Array)</strong>
+                Almacena los símbolos y cantidades de los átomos que
+                forman la molécula.
+            </div>
+
+            <div class="dato">
+                <strong>Grafo</strong>
+                Representa las conexiones entre el carbono y los cuatro
+                átomos de hidrógeno.
+            </div>
+
+            <div class="dato">
+                <strong>Simulación</strong>
+                Calcula las cantidades de reactivos y productos de la
+                combustión del metano.
+            </div>
+
+            <div class="dato">
+                <strong>Balance químico</strong>
+                Comprueba la conservación de los átomos durante la reacción.
+            </div>
+
+        </div>
+
+        <div class="importante">
+            <strong>Integración química-computacional:</strong>
+            la aplicación relaciona la estructura molecular del metano
+            con estructuras abstractas de programación para representar,
+            analizar y simular una reacción química.
+        </div>
+    </section>
+
+</main>
+
 
 <footer>
     <p>Proyecto académico - Química analítica con estructuras de datos</p>
 </footer>
 
+
 <script>
 
-function mostrarAtomos() {
+    /*
+    ============================================================
+    ESTRUCTURA DE DATOS 1: ARREGLO DE ÁTOMOS
+    ============================================================
+    */
 
-    const resultado = document.getElementById("atomos");
-
-    resultado.style.display = "block";
-
-    resultado.innerHTML = `
-        <strong>Composición del metano:</strong><br><br>
-        Carbono (C): 1 átomo<br>
-        Hidrógeno (H): 4 átomos<br><br>
-        Fórmula molecular: CH₄
-    `;
-}
-
-
-function mostrarGrafo() {
-
-    const resultado = document.getElementById("grafo");
-
-    resultado.style.display = "block";
-
-    resultado.innerHTML = `
-        <strong>Representación del grafo:</strong><br><br>
-        C → H1<br>
-        C → H2<br>
-        C → H3<br>
-        C → H4<br><br>
-        El carbono tiene 4 conexiones.
-    `;
-}
+    const atomos = [
+        {
+            simbolo: "C",
+            nombre: "Carbono",
+            cantidad: 1
+        },
+        {
+            simbolo: "H",
+            nombre: "Hidrógeno",
+            cantidad: 4
+        }
+    ];
 
 
-function verificarBalance() {
+    /*
+    ============================================================
+    ESTRUCTURA DE DATOS 2: GRAFO MOLECULAR
+    ============================================================
+    Cada elemento representa un nodo y sus conexiones.
+    ============================================================
+    */
 
-    const resultado = document.getElementById("balance");
-
-    resultado.style.display = "block";
-
-    const carbonoReactivos = 1;
-    const hidrogenoReactivos = 4;
-    const oxigenoReactivos = 4;
-
-    const carbonoProductos = 1;
-    const hidrogenoProductos = 4;
-    const oxigenoProductos = 4;
-
-    if (
-        carbonoReactivos === carbonoProductos &&
-        hidrogenoReactivos === hidrogenoProductos &&
-        oxigenoReactivos === oxigenoProductos
-    ) {
-
-        resultado.innerHTML = `
-            <strong>✓ La reacción está BALANCEADA.</strong><br><br>
-            Carbono: 1 → 1<br>
-            Hidrógeno: 4 → 4<br>
-            Oxígeno: 4 → 4
-        `;
-
-    } else {
-
-        resultado.innerHTML = `
-            La reacción NO está balanceada.
-        `;
-    }
-}
+    const grafoMolecular = {
+        C: ["H1", "H2", "H3", "H4"],
+        H1: ["C"],
+        H2: ["C"],
+        H3: ["C"],
+        H4: ["C"]
+    };
 
 
-function simularReaccion() {
+    /*
+    ============================================================
+    FUNCIÓN PARA MOSTRAR EL ARREGLO DE ÁTOMOS
+    ============================================================
+    */
 
-    const metano = parseFloat(
-        document.getElementById("metano").value
-    );
+    function mostrarAtomos() {
 
-    const resultado = document.getElementById("simulacion");
+        let resultado = "<strong>Arreglo de átomos:</strong><br><br>";
 
-    resultado.style.display = "block";
+        atomos.forEach(function(atomo) {
 
-    if (isNaN(metano) || metano <= 0) {
+            resultado +=
+                "Elemento: " +
+                atomo.nombre +
+                " (" +
+                atomo.simbolo +
+                ") — Cantidad: " +
+                atomo.cantidad +
+                "<br>";
 
-        resultado.innerHTML = `
-            <strong>Ingresa una cantidad válida de metano.</strong>
-        `;
+        });
 
-        return;
+        resultado +=
+            "<br><strong>Fórmula molecular:</strong> CH₄";
+
+        document.getElementById("resultadoAtomos").innerHTML = resultado;
     }
 
-    const oxigeno = metano * 2;
-    const dioxidoCarbono = metano;
-    const agua = metano * 2;
 
-    resultado.innerHTML = `
-        <strong>Resultados de la simulación:</strong><br><br>
+    /*
+    ============================================================
+    FUNCIÓN PARA MOSTRAR EL GRAFO MOLECULAR
+    ============================================================
+    */
 
-        CH₄ inicial:
-        ${metano.toFixed(2)} mol<br>
+    function mostrarGrafo() {
 
-        O₂ necesario:
-        ${oxigeno.toFixed(2)} mol<br>
+        let resultado =
+            "<strong>Grafo molecular del metano:</strong><br><br>";
 
-        CO₂ producido:
-        ${dioxidoCarbono.toFixed(2)} mol<br>
+        resultado +=
+            "C → " +
+            grafoMolecular.C.join(", ") +
+            "<br>";
 
-        H₂O producida:
-        ${agua.toFixed(2)} mol
-    `;
-}
+        resultado +=
+            "H1 → " +
+            grafoMolecular.H1.join(", ") +
+            "<br>";
+
+        resultado +=
+            "H2 → " +
+            grafoMolecular.H2.join(", ") +
+            "<br>";
+
+        resultado +=
+            "H3 → " +
+            grafoMolecular.H3.join(", ") +
+            "<br>";
+
+        resultado +=
+            "H4 → " +
+            grafoMolecular.H4.join(", ") +
+            "<br><br>";
+
+        const conexionesCarbono =
+            grafoMolecular.C.length;
+
+        resultado +=
+            "<strong>Grado del carbono:</strong> " +
+            conexionesCarbono +
+            " conexiones.<br>";
+
+        resultado +=
+            "Esto representa los cuatro enlaces del carbono con los átomos de hidrógeno.";
+
+        document.getElementById("resultadoGrafo").innerHTML = resultado;
+    }
+
+
+    /*
+    ============================================================
+    FUNCIÓN PARA VERIFICAR EL BALANCE
+    ============================================================
+    */
+
+    function verificarBalance() {
+
+        const reactivos = {
+            C: 1,
+            H: 4,
+            O: 4
+        };
+
+        const productos = {
+            C: 1,
+            H: 4,
+            O: 4
+        };
+
+        const carbono =
+            reactivos.C === productos.C;
+
+        const hidrogeno =
+            reactivos.H === productos.H;
+
+        const oxigeno =
+            reactivos.O === productos.O;
+
+        if (carbono && hidrogeno && oxigeno) {
+
+            document.getElementById("resultadoBalance").innerHTML =
+                "<strong>✓ Reacción balanceada correctamente.</strong><br><br>" +
+                "Carbono (C): 1 átomo en reactivos y 1 en productos.<br>" +
+                "Hidrógeno (H): 4 átomos en reactivos y 4 en productos.<br>" +
+                "Oxígeno (O): 4 átomos en reactivos y 4 en productos.<br><br>" +
+                "La ecuación CH₄ + 2O₂ → CO₂ + 2H₂O conserva la cantidad de átomos.";
+
+        } else {
+
+            document.getElementById("resultadoBalance").innerHTML =
+                "<strong>La reacción no está balanceada.</strong>";
+        }
+    }
+
+
+    /*
+    ============================================================
+    FUNCIÓN PARA SIMULAR LA COMBUSTIÓN
+    ============================================================
+    */
+
+    function simularReaccion() {
+
+        const molesCH4 =
+            parseFloat(document.getElementById("moles").value);
+
+        if (isNaN(molesCH4) || molesCH4 < 0) {
+
+            document.getElementById("resultadoSimulacion").innerHTML =
+                "Introduce una cantidad válida de moles de CH₄.";
+
+            return;
+        }
+
+
+        // Relación estequiométrica:
+        // 1 CH4 + 2 O2 → 1 CO2 + 2 H2O
+
+        const molesO2 =
+            molesCH4 * 2;
+
+        const molesCO2 =
+            molesCH4;
+
+        const molesH2O =
+            molesCH4 * 2;
+
+
+        document.getElementById("resultadoSimulacion").innerHTML =
+
+            "<strong>Resultado de la simulación:</strong><br><br>" +
+
+            "CH₄ inicial: " +
+            molesCH4 +
+            " mol<br>" +
+
+            "O₂ necesario: " +
+            molesO2 +
+            " mol<br>" +
+
+            "CO₂ producido: " +
+            molesCO2 +
+            " mol<br>" +
+
+            "H₂O producida: " +
+            molesH2O +
+            " mol<br><br>" +
+
+            "<strong>Interpretación:</strong> " +
+            "por cada mol de CH₄ se requieren 2 moles de O₂ " +
+            "y se producen 1 mol de CO₂ y 2 moles de H₂O.";
+    }
 
 </script>
 
